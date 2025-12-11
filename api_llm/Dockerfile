@@ -14,11 +14,9 @@ COPY requirements.txt .
 # Instalace Python knihoven
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Zkopíruj model (z tvého lokálního adresáře ./model/)
-COPY model/ ./robeczech_babis_freeze_last2/
-
 # Zkopíruj aplikaci
 COPY main.py .
 
 # Uvicorn – spustíme API server
 CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
+
