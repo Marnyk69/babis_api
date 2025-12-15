@@ -6,5 +6,6 @@ scikit-learn
 sentence-transformers
 pandas
 numpy
-torch
+torch==2.1.2+cpu
+--extra-index-url https://download.pytorch.org/whl/cpu
 python-multipart
